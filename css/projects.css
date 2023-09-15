@@ -7,6 +7,10 @@ body {
     background-color: #edefec;
 }
 
+nav {
+    padding: 20px;
+}
+
 .nav-buttons {
     display: flex;
     justify-content: space-around;
@@ -20,4 +24,5 @@ body {
 
 .nav-buttons > button:hover {
     cursor: pointer;
+    color: white;
 }
