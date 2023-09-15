@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #edefec;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-buttons > button {
+    background-color: transparent;
+    border: none;
+}
+
+.nav-buttons > button:hover {
+    cursor: pointer;
+}
