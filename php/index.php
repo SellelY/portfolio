@@ -14,9 +14,16 @@ ini_set("display_errors", 1);
     ];
 
     foreach ($data["projects"] as $project) {
+        $imageURLs = is_array($project["images"]) ? $project["images"] : [$project["images"]];
+        $imageArray = [];
+
+        foreach ($imageURLs as $imageURL) {
+            $imageArray[] = ["url" => $imageURL];
+        }
+
         $response["projects"][] = [
             "name" => $project["name"],
-            "image" => $project["image"]
+            "images" => $imageArray
         ];
     }
 

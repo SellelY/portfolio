@@ -13,13 +13,13 @@ async function projects () {
         </div>
     `;
 
-    let projects = main.querySelector("#projects");
+    let projectContainer = main.querySelector("#projects");
     let message = main.querySelector("#message");
 
     try {
         let response = await fetch("/php/index.php");
         let data = await response.json();
-        projects.innerHTML = "";
+        projectContainer.innerHTML = "";
         console.log(data);
 
         if (!response.ok) {
@@ -29,16 +29,24 @@ async function projects () {
                 let projectImage = document.createElement("div");
                 projectImage.id = "project-image";
 
-                let image = document.createElement("img");
-                image.src = project.image
+                project.images.forEach((imageURL) => {
+                    let image = document.createElement("img");
+                    image.src = imageURL;
 
-                let imageName = document.createElement("p");
-                imageName.classList = "image-name";
-                imageName.textContent = project.name;
+                    let imageName = document.createElement("p");
+                    imageName.className = "image-name";
+                    imageName.textContent = project.name;
 
-                projectImage.appendChild(image);
-                projectImage.appendChild(imageName);
-                projects.appendChild(projectImage);
+                    let imageContainer = document.createElement("div");
+                    imageContainer.classList = "image.container";
+                    imageContainer.appendChild(image);
+                    imageContainer.appendChild(imageName);
+
+                    projectImage.appendChild(imageContainer);
+                });
+
+                projectContainer.appendChild(projectImage)
+
             });
         }
 

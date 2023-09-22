@@ -2,13 +2,13 @@
     "projects": [
 
         {
-            "name": "Brand identity",
-            "image": "/media/brand-id-insta-copy.png"
+            "name": "Malmö Dansakademi: Brand identity",
+            "images": ["/media/brand-id-insta-copy.png", "/media/brand-id-insta-copy2.png"]
         },
 
         {
-            "name": "Instagram carousel",
-            "image": "/media/pernilla.nadie-instagram-karusell.png"
+            "name": "HiQ: Instagram carousel",
+            "images": ["/media/insta-karusell-1.png", "/media/insta-karusell-2.png"]
         }
 
     ]
