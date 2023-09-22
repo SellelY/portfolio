@@ -25,19 +25,22 @@ async function projects () {
         if (!response.ok) {
             message.innerHTML = `Oops! Something went wrong, we got this from the server <span>${data.message}</span>.`;
         } else {
-            data.forEach( async(project) => {
-                console.log(project);
-            })
+            data.projects.forEach((project) => {
+                let projectImage = document.createElement("div");
+                projectImage.id = "project-image";
 
-            /*projects.innerHTML = `
-                <div id=project-image>
-                    <image src="${data.projects[0].image}">
-                    <p class=image-name>${data.projects[0].name}</p>
-                </div>
-            `; */
+                let image = document.createElement("img");
+                image.src = project.image
+
+                let imageName = document.createElement("p");
+                imageName.classList = "image-name";
+                imageName.textContent = project.name;
+
+                projectImage.appendChild(image);
+                projectImage.appendChild(imageName);
+                projects.appendChild(projectImage);
+            });
         }
-
-        projects.appendChild(projectImage)
 
     } catch (error) {
         console.error(error);
