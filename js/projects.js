@@ -27,6 +27,9 @@ async function projects() {
         data.projects.forEach((project) => {
             let image = document.createElement("img");
             image.src = project.images[0].url;
+
+            let hoverName = document.createElement("div");
+            hoverName.className = "hover-name";
     
             let imageName = document.createElement("p");
             imageName.className = "image-name";
@@ -34,8 +37,13 @@ async function projects() {
     
             let imageContainer = document.createElement("div");
             imageContainer.classList = "image-container";
+            imageContainer.appendChild(hoverName)
             imageContainer.appendChild(image);
-            imageContainer.appendChild(imageName);
+            hoverName.appendChild(imageName);
+
+            imageContainer.addEventListener("click", () => {
+                displayImagesFromArray(project);
+            })
     
             projectsContainer.appendChild(imageContainer);
       });
@@ -46,3 +54,19 @@ async function projects() {
 }
 
 projects();
+
+function displayImagesFromArray(project) {
+    main.innerHTML = "";
+
+    let imageContainer = document.createElement("div");
+    imageContainer.classList = "image-container";
+
+    project.images.forEach((imageData) => {
+        let image = document.createElement("img");
+        image.src = imageData.url;
+
+        imageContainer.appendChild(image);
+    });
+
+    main.appendChild(imageContainer);
+}
