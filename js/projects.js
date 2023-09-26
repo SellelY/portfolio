@@ -6,4 +6,4 @@ function projects () {
     main.innerHTML = ``;
 }
 
-projects();
+
