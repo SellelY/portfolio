@@ -56,4 +56,4 @@ async function projects () {
 
 }
 
-projects();
+
