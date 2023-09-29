@@ -56,17 +56,30 @@ async function projects() {
 projects();
 
 function displayImagesFromArray(project) {
-    main.innerHTML = "";
+  main.innerHTML = "";
 
-    let imageContainer = document.createElement("div");
-    imageContainer.classList = "image-container";
+  main.innerHTML = `
+  <div id="project-container">
+      <p id="message"></p>
+      <div id="projects">
+          <div id="loading">Loading, kindly wait...</div>
+      </div>
+  </div>
+`;
 
-    project.images.forEach((imageData) => {
-        let image = document.createElement("img");
-        image.src = imageData.url;
+  let projectsContainer = main.querySelector("#projects");
+  projectsContainer.innerHTML = "";
 
-        imageContainer.appendChild(image);
-    });
+  let imageContainer = document.createElement("div");
+  imageContainer.classList = "image-container";
 
-    main.appendChild(imageContainer);
+  project.images.forEach((imageData) => {
+
+    let image = document.createElement("img");
+    image.src = imageData.url;
+
+    imageContainer.appendChild(image);
+  });
+
+  projectsContainer.appendChild(imageContainer);
 }
