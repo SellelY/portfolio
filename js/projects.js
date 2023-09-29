@@ -70,16 +70,14 @@ function displayImagesFromArray(project) {
   let projectsContainer = main.querySelector("#projects");
   projectsContainer.innerHTML = "";
 
-  let imageContainer = document.createElement("div");
-  imageContainer.classList = "image-container";
-
   project.images.forEach((imageData) => {
+    let imageContainer = document.createElement("div");
+    imageContainer.classList = "image-container";
 
     let image = document.createElement("img");
     image.src = imageData.url;
 
     imageContainer.appendChild(image);
+    projectsContainer.appendChild(imageContainer);
   });
-
-  projectsContainer.appendChild(imageContainer);
 }
