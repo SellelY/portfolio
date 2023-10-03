@@ -47,6 +47,10 @@ nav {
     max-width: 100%;
 }
 
+.image-container video {
+    max-width: 100%;
+}
+
 .hover-name {
     display: none;
     position: absolute;

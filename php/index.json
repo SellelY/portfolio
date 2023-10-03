@@ -13,12 +13,14 @@
 
         {
             "name" : "HiQ: Instagram animation",
-            "images": ["/media/Screenshot 2023-09-26 at 11.52.54.png", "/media/RIG.mp4"]
+            "images": [""],
+            "media": "/media/RIG.mp4"
         },
 
         {
             "name" : "Sharkmob: Logo animation",
-            "images": ["/media/Screenshot 2023-09-26 at 11.55.38.png", "/media/sharkmob-animation-logo (kopia).mp4"]
+            "images": [""],
+            "media": "/media/sharkmob-animation-logo.mp4"
         }
 
     ]
