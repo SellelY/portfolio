@@ -18,3 +18,13 @@ main {
     opacity: 50%;
     padding: 200px;
 }
+
+#user-icon {
+    width: 20px;
+}
+
+#om-mig {
+    display: flex;
+    align-items: center;
+    border-right: 1.7px black solid;
+}

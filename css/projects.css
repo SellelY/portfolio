@@ -1,31 +1,36 @@
 @font-face {
-    font-family: Montsserat;
-    src: url(/Montserrat/Montserrat-VariableFont_wght.ttf);
+    font-family: pixel;
+    src: url(/pixeloid-font/PixeloidSans-mLxMm.ttf);
 }
 
 body {
     background-color: #edefec;
-    font-family: Montsserat;
+    font-family: pixel;
 }
 
 nav {
-    padding: 20px;
+    padding: 10px;
+    background-color: #5b7caa;
+    border-bottom: 1.7px black solid;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-buttons {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    gap: 30px;
 }
 
 .nav-buttons > button {
     background-color: transparent;
     border: none;
+    font-family: pixel;
+    color: white;
 }
 
 .nav-buttons > button:hover {
     cursor: pointer;
-    color: white;
+    color: black;
 }
 
 #projects {
