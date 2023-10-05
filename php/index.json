@@ -3,12 +3,24 @@
 
         {
             "name": "Malmö Dansakademi: Brand identity",
-            "images": ["/media/brand-id-insta-copy.png", "/media/brand-id-insta-copy2.png"]
+            "images": ["/media/brand-id-insta-copy.png", "/media/brand-id-insta-copy2.png", "/media/pernilla.nadie-brandID-copy.png"]
         },
 
         {
             "name": "HiQ: Instagram carousel",
-            "images": ["/media/insta-karusell-1.png", "/media/insta-karusell-2.png"]
+            "images": ["/media/insta-karusell-1.png", "/media/insta-karusell-2.png", "/media/insta-karusell-3.png", "/media/insta-karusell-4.png", "/media/insta-karusell-5.png"]
+        },
+
+        {
+            "name" : "HiQ: Instagram animation",
+            "images": [""],
+            "media": "/media/RIG.mp4"
+        },
+
+        {
+            "name" : "Sharkmob: Logo animation",
+            "images": [""],
+            "media": "/media/sharkmob-animation-logo.mp4"
         }
 
     ]
